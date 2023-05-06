@@ -15,7 +15,7 @@ with st.sidebar:
   
 # Retrieve transcript from YouTube video
 yt_url = 'https://www.youtube.com/watch?v=-3Kf2ZZU-dg'
-loader = YoutubeLoader.from_youtube_url(yt_url, add_video_info=True)
+loader = YoutubeLoader.from_youtube_url(yt_url, add_video_info=False)
 results = loader.load()
 
 ## Extract only text content
