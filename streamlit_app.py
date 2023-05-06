@@ -1,6 +1,6 @@
 import streamlit as st
 from langchain.document_loaders import YoutubeLoader
-from rpunct import RestorePuncts
+from deepmultilingualpunctuation import PunctuationModel
 
 st.title('📺 YouTube Transcription App')
 
@@ -24,10 +24,9 @@ yt_text = results[0].page_content
 #st.write(yt_text)
 
 ## Text processing
-rpunct = RestorePuncts(use_cuda=False)
-processed_text = rpunct.punctuate(text)
-
-#st.write(processed_text)
+model = PunctuationModel()
+processed_text = model.restore_punctuation(text)
+st.write(processed_text)
 
 # Display video thumbnail image
 #st.image(yt_metadata.thumbnail_url, width=350) 
