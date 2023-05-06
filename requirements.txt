@@ -4,4 +4,4 @@ pytube
 langchain
 unstructured
 sentencepiece
-rpunct
+deepmultilingualpunctuation
