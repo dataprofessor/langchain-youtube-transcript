@@ -21,9 +21,6 @@ results = loader.load()
 ## Extract only text content
 yt_text = results[0].page_content
 
-## Metadata
-yt_metadata = results[0].metadata
-st.write(yt_metadata.title)
 
 # Display video thumbnail image
-st.image(yt_metadata.thumbnail_url, width=350) 
+#st.image(yt_metadata.thumbnail_url, width=350) 
