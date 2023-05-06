@@ -21,13 +21,13 @@ results = loader.load()
 
 ## Extract only text content
 yt_text = results[0].page_content
-st.write(yt_text)
+#st.write(yt_text)
 
 ## Text processing
 rpunct = RestorePuncts()
 processed_text = rpunct.punctuate(text)
 
-st.write(processed_text)
+#st.write(processed_text)
 
 # Display video thumbnail image
 #st.image(yt_metadata.thumbnail_url, width=350) 
