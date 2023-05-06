@@ -24,7 +24,7 @@ yt_text = results[0].page_content
 #st.write(yt_text)
 
 ## Text processing
-rpunct = RestorePuncts()
+rpunct = RestorePuncts(use_cuda=False)
 processed_text = rpunct.punctuate(text)
 
 #st.write(processed_text)
