@@ -30,6 +30,6 @@ yt_text = results[0].page_content
 #st.write(processed_text)
 
 # Display video thumbnail image
-yt_id = yt_url.split('=')
+yt_id = yt_url.split('=')[-1]
 st.write(yt_id)
 #st.image(yt_metadata.thumbnail_url, width=350) 
