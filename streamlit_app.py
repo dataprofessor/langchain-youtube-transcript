@@ -1,6 +1,6 @@
 import streamlit as st
 from langchain.document_loaders import YoutubeLoader
-
+from punctuator import Punctuator
 
 st.title('📺 YouTube Transcription App')
 
@@ -24,7 +24,9 @@ yt_text = results[0].page_content
 #st.write(yt_text)
 
 ## Text processing
-
+model = Punctuator('model.pcl')
+processed_text = model.punctuate(yt_text)
+st.write(processed_text)
 
 #tokenizer = 
 #model = PunctCapSegModelONNX.from_pretrained("pcs_en")
