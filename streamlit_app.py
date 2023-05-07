@@ -1,6 +1,6 @@
 import streamlit as st
 from langchain.document_loaders import YoutubeLoader
-from punctuators.models import PunctCapSegModelONNX
+
 
 st.title('📺 YouTube Transcription App')
 
@@ -27,9 +27,9 @@ yt_text = results[0].page_content
 
 
 #tokenizer = 
-model = PunctCapSegModelONNX.from_pretrained("pcs_en")
-processed_text = model.infer(yt_text)
-st.write(processed_text)
+#model = PunctCapSegModelONNX.from_pretrained("pcs_en")
+#processed_text = model.infer(yt_text)
+#st.write(processed_text)
 
 # Display video thumbnail image
 def extract_yt_id(input_url):
