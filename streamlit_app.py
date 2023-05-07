@@ -34,7 +34,7 @@ yt_text = results[0].page_content
 #  if input_url.
 #  return input_url.split('=')[-1]
 
-yt_url.startswith('https://www.youtube.com')
+st.write(yt_url.startswith('https://www.youtube.com'))
 
 yt_id = yt_url.split('=')[-1]
 st.write(yt_id)
