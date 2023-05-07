@@ -4,4 +4,4 @@ pytube
 langchain
 unstructured
 sentencepiece
-punctuator
+git+https://github.com/ernie-mlg/rpunct.git
