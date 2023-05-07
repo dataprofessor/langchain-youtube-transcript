@@ -35,7 +35,7 @@ def extract_yt_id(input_url):
     return input_url_split
   if input_url.startswith('https://youtu.be/'):
     input_url_split = input_url.split('/')[-1]
-    return input_url_split
+    return f'http://i.ytimg.com/vi/{input_url_split}/maxresdefault.jpg'
 
 yt_img_url = extract_yt_id(yt_url)
 
