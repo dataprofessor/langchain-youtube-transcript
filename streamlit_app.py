@@ -1,5 +1,6 @@
 import streamlit as st
 from langchain.document_loaders import YoutubeLoader
+import requests
 
 st.title('📺 YouTube Transcription App')
 
@@ -23,6 +24,17 @@ yt_text = results[0].page_content
 #st.write(yt_text)
 
 ## Text processing
+API_URL = "https://api-inference.huggingface.co/models/oliverguhr/fullstop-punctuation-multilingual-base"
+headers = {"Authorization": f"Bearer {st.secrets['HFkey']}"}
+def query(payload):
+	response = requests.post(API_URL, headers=headers, json=payload)
+	return response.json()
+	
+output = query({
+	"inputs": "My name is Sarah Jessica Parker but you can call me Jessica",
+})
+st.write(output)
+
 #tokenizer = 
 #model = 
 #processed_text = model(text)
