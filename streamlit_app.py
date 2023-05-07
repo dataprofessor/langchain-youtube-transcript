@@ -39,7 +39,7 @@ def extract_yt_id(input_url):
     input_url_split = input_url.split('/')[-1]
     processed_url.append(input_url_split)
     #return f'http://i.ytimg.com/vi/{input_url_split}/maxresdefault.jpg'
-  return f'http://i.ytimg.com/vi/{processed_url}/maxresdefault.jpg'
+  return f'http://i.ytimg.com/vi/{processed_url[0]}/maxresdefault.jpg'
 
 yt_img_url = extract_yt_id(yt_url)
 st.write(yt_img_url)
