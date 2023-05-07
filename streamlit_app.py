@@ -1,6 +1,5 @@
 import streamlit as st
 from langchain.document_loaders import YoutubeLoader
-from transformers import AutoTokenizer, AutoModelForTokenClassification
 
 st.title('📺 YouTube Transcription App')
 
@@ -24,10 +23,10 @@ yt_text = results[0].page_content
 #st.write(yt_text)
 
 ## Text processing
-tokenizer = AutoTokenizer.from_pretrained('oliverguhr/fullstop-punctuation-multilingual-base')
-model = AutoModelForTokenClassification.from_pretrained('oliverguhr/fullstop-punctuation-multilingual-base')
-processed_text = model(text)
-st.write(processed_text)
+#tokenizer = 
+#model = 
+#processed_text = model(text)
+#st.write(processed_text)
 
 # Display video thumbnail image
 def extract_yt_id(input_url):
