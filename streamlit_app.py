@@ -26,7 +26,7 @@ yt_text = results[0].page_content
 ## Text processing
 tokenizer = AutoTokenizer.from_pretrained('oliverguhr/fullstop-punctuation-multilingual-base')
 model = AutoModelForTokenClassification.from_pretrained('oliverguhr/fullstop-punctuation-multilingual-base')
-processed_text = model.restore_punctuation(text)
+processed_text = model(text)
 st.write(processed_text)
 
 # Display video thumbnail image
