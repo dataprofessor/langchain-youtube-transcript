@@ -38,5 +38,5 @@ def extract_yt_id(input_url):
     return f'http://i.ytimg.com/vi/{input_url_split}/maxresdefault.jpg'
 
 yt_img_url = extract_yt_id(yt_url)
-
-st.image(yt_img_url, width=350)
+st.write(yt_img_url)
+#st.image(yt_img_url, width=350)
