@@ -24,7 +24,7 @@ yt_text = results[0].page_content
 #st.write(yt_text)
 
 ## Text processing
-API_URL = "https://api-inference.huggingface.co/models/oliverguhr/fullstop-punctuation-multilingual-base"
+API_URL = "https://api-inference.huggingface.co/models/felflare/bert-restore-punctuation"
 headers = {"Authorization": f"Bearer {st.secrets['HFkey']}"}
 def query(payload):
 	response = requests.post(API_URL, headers=headers, json=payload)
