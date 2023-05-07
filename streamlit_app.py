@@ -1,6 +1,5 @@
 import streamlit as st
 from langchain.document_loaders import YoutubeLoader
-from deepmultilingualpunctuation import PunctuationModel
 
 st.title('📺 YouTube Transcription App')
 
