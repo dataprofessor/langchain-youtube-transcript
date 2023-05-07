@@ -38,9 +38,5 @@ def extract_yt_id(input_url):
     return input_url_split
 
 yt_img_url = extract_yt_id(yt_url)
-st.write(yt_img_url)
 
-#yt_id = yt_url.split('=')[-1]
-#st.write(yt_id)
-
-#st.image(yt_metadata.thumbnail_url, width=350) 
+st.image(yt_img_url, width=350)
