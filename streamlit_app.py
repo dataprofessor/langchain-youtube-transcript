@@ -1,6 +1,6 @@
 import streamlit as st
 from langchain.document_loaders import YoutubeLoader
-from deepmultilingualpunctuation import PunctuationModel
+from transformers import AutoTokenizer, AutoModelForTokenClassification
 
 st.title('📺 YouTube Transcription App')
 
@@ -24,7 +24,8 @@ yt_text = results[0].page_content
 #st.write(yt_text)
 
 ## Text processing
-model = PunctuationModel()
+tokenizer = AutoTokenizer.from_pretrained('oliverguhr/fullstop-punctuation-multilingual-base')
+model = AutoModelForTokenClassification.from_pretrained('oliverguhr/fullstop-punctuation-multilingual-base')
 processed_text = model.restore_punctuation(text)
 st.write(processed_text)
 
