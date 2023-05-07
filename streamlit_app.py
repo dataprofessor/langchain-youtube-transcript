@@ -28,7 +28,7 @@ yt_text = results[0].page_content
 
 #tokenizer = 
 model = PunctCapSegModelONNX.from_pretrained("pcs_en")
-processed_text = model.infer(text)
+processed_text = model.infer(yt_text)
 st.write(processed_text)
 
 # Display video thumbnail image
