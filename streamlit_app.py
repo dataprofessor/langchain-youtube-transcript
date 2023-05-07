@@ -30,7 +30,7 @@ yt_text = results[0].page_content
 
 # Display video thumbnail image
 def extract_yt_id(input_url):
-  processed_url = ''
+  processed_url = []
   if input_url.startswith('https://www.youtube.com') or input_url.startswith('https://youtube.com'):
     input_url_split = input_url.split('=')[-1]
     processed_url.append(input_url_split)
