@@ -33,9 +33,11 @@ yt_text = results[0].page_content
 def extract_yt_id(input_url):
   if input_url.startswith('https://www.youtube.com') or input_url.startswith('https://youtube.com') or input_url.startswith('https://youtu.be/'):
     return input_url.split('/')[-1]
-  
-#st.write(yt_url.startswith('https://www.youtube.com'))
 
-yt_id = yt_url.split('=')[-1]
-st.write(yt_id)
+yt_img_url = extract_yt_id(yt_url)
+st.write(yt_img_url)
+
+#yt_id = yt_url.split('=')[-1]
+#st.write(yt_id)
+
 #st.image(yt_metadata.thumbnail_url, width=350) 
