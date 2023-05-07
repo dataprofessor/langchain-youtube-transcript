@@ -30,12 +30,16 @@ yt_text = results[0].page_content
 
 # Display video thumbnail image
 def extract_yt_id(input_url):
+  processed_url = ''
   if input_url.startswith('https://www.youtube.com') or input_url.startswith('https://youtube.com'):
     input_url_split = input_url.split('=')[-1]
-    return input_url_split
+    processed_url.append(input_url_split)
+    #return f'http://i.ytimg.com/vi/{input_url_split}/maxresdefault.jpg'
   if input_url.startswith('https://youtu.be/'):
     input_url_split = input_url.split('/')[-1]
-    return f'http://i.ytimg.com/vi/{input_url_split}/maxresdefault.jpg'
+    processed_url.append(input_url_split)
+    #return f'http://i.ytimg.com/vi/{input_url_split}/maxresdefault.jpg'
+   return processed_url
 
 yt_img_url = extract_yt_id(yt_url)
 st.write(yt_img_url)
