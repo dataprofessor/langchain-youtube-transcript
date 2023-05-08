@@ -1,6 +1,8 @@
 import streamlit as st
 from langchain.document_loaders import YoutubeLoader
 
+st.set_page_config(page_title="YouTube Transcription App")
+
 st.title('📺 YouTube Transcription App')
 
 with st.sidebar:
@@ -12,25 +14,6 @@ with st.sidebar:
   - Streamlit
   - Langchain
   ''')
-
-# Retrieve transcript from YouTube video
-yt_url = 'https://www.youtube.com/watch?v=-3Kf2ZZU-dg'
-loader = YoutubeLoader.from_youtube_url(yt_url, add_video_info=False)
-results = loader.load()
-
-## Extract only text content
-yt_text = results[0].page_content
-st.write(yt_text)
-
-## Text processing
-#model = RestorePuncts(use_cuda=False)
-#processed_text = model.punctuate(yt_text)
-#st.write(processed_text)
-
-#tokenizer = 
-#model = PunctCapSegModelONNX.from_pretrained("pcs_en")
-#processed_text = model.infer(yt_text)
-#st.write(processed_text)
 
 # Display video thumbnail image
 def extract_yt_id(input_url):
@@ -45,6 +28,19 @@ def extract_yt_id(input_url):
     #return f'http://i.ytimg.com/vi/{input_url_split}/maxresdefault.jpg'
   return f'http://i.ytimg.com/vi/{processed_url[0]}/maxresdefault.jpg'
 
+## Display YouTube thumbnail image
 yt_img_url = extract_yt_id(yt_url)
-st.image(yt_img_url, width=350)
+st.image(yt_img_url, width=350) 
+
+
+# Retrieve transcript from YouTube video
+yt_url = 'https://www.youtube.com/watch?v=-3Kf2ZZU-dg'
+loader = YoutubeLoader.from_youtube_url(yt_url, add_video_info=False)
+results = loader.load()
+
+## Extract only text content
+yt_text = results[0].page_content
+st.write(yt_text)
+
+
 
