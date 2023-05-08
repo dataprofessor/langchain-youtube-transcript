@@ -15,6 +15,8 @@ with st.sidebar:
   - Streamlit
   - Langchain
   ''')
+  add_vertical_space(5)
+  st.write('Made with ❤️ by [Data Professor](https://youtube.com/dataprofessor)')
 
 # YouTube URL
 # yt_url = 'https://youtu.be/n_3XDVOVraI'
