@@ -18,7 +18,7 @@ with st.sidebar:
 # YouTube URL
 # yt_url = 'https://youtu.be/n_3XDVOVraI'
 yt_url = st.text_input('Enter YouTube video URL', '')
-st.code('https://youtu.be/n_3XDVOVraI')
+# st.code('https://youtu.be/n_3XDVOVraI')
 st.code('https://www.youtube.com/watch?v=n_3XDVOVraI')
 
 # Display video thumbnail image
