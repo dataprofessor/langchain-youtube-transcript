@@ -40,7 +40,7 @@ def extract_yt_id(input_url):
   if input_url.startswith('https://youtu.be/'):
     input_url_split = input_url.split('/')[-1]
     processed_url.append(input_url_split)
-  return processed_url[0]
+  return processed_url
 
 # Get YouTube thumbnail image
 def get_yt_img(input_id):
@@ -48,7 +48,7 @@ def get_yt_img(input_id):
 
 # Retrieve transcript from YouTube video
 def get_transcript(input_id):
-  input_url = f'https://www.youtube.com/watch?v={input_id}'
+  input_url = f'https://www.youtube.com/watch?v={input_id[0]}'
   loader = YoutubeLoader.from_youtube_url(input_url , add_video_info=False)
   results = loader.load()
   yt_text = results[0].page_content
