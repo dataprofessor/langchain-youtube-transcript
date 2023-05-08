@@ -15,6 +15,9 @@ with st.sidebar:
   - Langchain
   ''')
 
+# YouTube URL
+yt_url = 'https://www.youtube.com/watch?v=-3Kf2ZZU-dg'
+  
 # Display video thumbnail image
 def extract_yt_id(input_url):
   processed_url = []
@@ -34,7 +37,6 @@ st.image(yt_img_url, width=350)
 
 
 # Retrieve transcript from YouTube video
-yt_url = 'https://www.youtube.com/watch?v=-3Kf2ZZU-dg'
 loader = YoutubeLoader.from_youtube_url(yt_url, add_video_info=False)
 results = loader.load()
 
