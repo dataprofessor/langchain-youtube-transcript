@@ -40,7 +40,7 @@ def extract_yt_id(input_url):
   if input_url.startswith('https://youtu.be/'):
     input_url_split = input_url.split('/')[-1]
     processed_url.append(input_url_split)
-  return processed_url
+  return processed_url[0]
 
 # Get YouTube thumbnail image
 def get_yt_img(input_id):
