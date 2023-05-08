@@ -63,8 +63,7 @@ else:
   ## Display YouTube thumbnail image
   yt_id = extract_yt_id(yt_url)
   get_yt_img(yt_id)
-  get_transcript(yt_id)
   
   ## Display transcription
-  #with st.expander('See video transcript'):
-  #  get_transcript(yt_id)
+  with st.expander('See video transcript'):
+    get_transcript(yt_id)
