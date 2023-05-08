@@ -41,10 +41,15 @@ def get_transcript(input_url):
   yt_text = results[0].page_content
   return st.write(yt_text)
 
-# Display YouTube thumbnail image
-yt_img_url = extract_yt_id(yt_url)
-st.image(yt_img_url, width=350)
-
-# Display transcription
-with st.expander('See video transcript'):
-  get_transcript(yt_url)
+# Conditional display of content
+if yt_url is not None:
+  ## Display YouTube thumbnail image
+  yt_img_url = extract_yt_id(yt_url)
+  st.image(yt_img_url, width=350)
+  
+  ## Display transcription
+  with st.expander('See video transcript'):
+    get_transcript(yt_url)
+    
+else: 
+  st.info('Please enter a YouTube video URL to get started!')
