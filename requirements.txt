@@ -1,4 +1,5 @@
 streamlit
+streamlit-extras
 youtube-transcript-api
 pytube
 langchain
