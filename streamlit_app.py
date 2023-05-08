@@ -18,8 +18,6 @@ with st.sidebar:
 # YouTube URL
 # yt_url = 'https://youtu.be/n_3XDVOVraI'
 yt_url = st.text_input('Enter YouTube video URL', '')
-# st.code('https://youtu.be/n_3XDVOVraI')
-st.code('https://www.youtube.com/watch?v=n_3XDVOVraI')
 
 # Display video thumbnail image
 def extract_yt_id(input_url):
@@ -44,6 +42,8 @@ def get_transcript(input_url):
 # Conditional display of content
 if yt_url == '':
   st.warning('👆 Please enter a YouTube video URL to get started!')
+  # st.code('https://youtu.be/n_3XDVOVraI')
+  st.code('https://www.youtube.com/watch?v=n_3XDVOVraI')
 else: 
   ## Display YouTube thumbnail image
   yt_img_url = extract_yt_id(yt_url)
