@@ -1,9 +1,7 @@
-# 📦 Streamlit App Starter Kit 
+# 📺 YouTube Transcription App
 ```
-⬆️ (Replace above with your app's name)
+This app retrieves the transcripts of YouTube videos using Langchain and Streamlit.
 ```
-
-Description of the app ...
 
 ## Demo App
 
