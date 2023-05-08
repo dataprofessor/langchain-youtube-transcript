@@ -20,7 +20,7 @@ results = loader.load()
 
 ## Extract only text content
 yt_text = results[0].page_content
-#st.write(yt_text)
+st.write(yt_text)
 
 ## Text processing
 #model = RestorePuncts(use_cuda=False)
