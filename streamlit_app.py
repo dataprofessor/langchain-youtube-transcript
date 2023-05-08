@@ -48,12 +48,12 @@ def get_yt_img(input_id):
 
 # Retrieve transcript from YouTube video
 def get_transcript(input_id):
-  loader = YoutubeLoader.from_youtube_url(f'https://www.youtube.com/watch?v={input_id}', add_video_info=False)
+  input_url = f'https://www.youtube.com/watch?v={input_id}'
+  loader = YoutubeLoader.from_youtube_url(input_url , add_video_info=False)
   results = loader.load()
   yt_text = results[0].page_content
-  #return st.write(yt_text)
-  return st.write(f'https://www.youtube.com/watch?v={input_id}')
-
+  return st.write(yt_text)
+  
 # Conditional display of content
 if yt_url == '':
   st.warning('👆 Please enter a YouTube video URL to get started!')
