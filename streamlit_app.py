@@ -24,9 +24,9 @@ yt_text = results[0].page_content
 #st.write(yt_text)
 
 ## Text processing
-model = RestorePuncts(use_cuda=False)
-processed_text = model.punctuate(yt_text)
-st.write(processed_text)
+#model = RestorePuncts(use_cuda=False)
+#processed_text = model.punctuate(yt_text)
+#st.write(processed_text)
 
 #tokenizer = 
 #model = PunctCapSegModelONNX.from_pretrained("pcs_en")
