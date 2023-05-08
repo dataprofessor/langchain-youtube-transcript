@@ -42,7 +42,6 @@ results = loader.load()
 
 ## Extract only text content
 yt_text = results[0].page_content
-st.write(yt_text)
 
-
-
+with st.expander('See video transcript'):
+  st.write(yt_text)
