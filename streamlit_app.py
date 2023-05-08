@@ -16,8 +16,11 @@ with st.sidebar:
   ''')
 
 # YouTube URL
-yt_url = 'https://www.youtube.com/watch?v=-3Kf2ZZU-dg'
-  
+# yt_url = 'https://youtu.be/n_3XDVOVraI'
+yt_url = st.text_input('Enter YouTube video URL', '')
+st.code('https://youtu.be/n_3XDVOVraI')
+st.code('https://www.youtube.com/watch?v=n_3XDVOVraI')
+
 # Display video thumbnail image
 def extract_yt_id(input_url):
   processed_url = []
@@ -31,17 +34,17 @@ def extract_yt_id(input_url):
     #return f'http://i.ytimg.com/vi/{input_url_split}/maxresdefault.jpg'
   return f'http://i.ytimg.com/vi/{processed_url[0]}/maxresdefault.jpg'
 
-## Display YouTube thumbnail image
-yt_img_url = extract_yt_id(yt_url)
-st.image(yt_img_url, width=350) 
-
-
 # Retrieve transcript from YouTube video
-loader = YoutubeLoader.from_youtube_url(yt_url, add_video_info=False)
-results = loader.load()
+def get_transcript(input_url):
+  loader = YoutubeLoader.from_youtube_url(yt_url, add_video_info=False)
+  results = loader.load()
+  yt_text = results[0].page_content
+  return st.write(yt_text)
 
-## Extract only text content
-yt_text = results[0].page_content
+# Display YouTube thumbnail image
+yt_img_url = extract_yt_id(yt_url)
+st.image(yt_img_url, width=350)
 
+# Display transcription
 with st.expander('See video transcript'):
-  st.write(yt_text)
+  get_transcript(yt_url)
