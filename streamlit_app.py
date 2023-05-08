@@ -57,8 +57,9 @@ def get_transcript(input_id):
 # Conditional display of content
 if yt_url == '':
   st.warning('👆 Please enter a YouTube video URL to get started!')
-  # st.code('https://youtu.be/n_3XDVOVraI')
-  st.code('https://www.youtube.com/watch?v=n_3XDVOVraI')
+  with st.expander('See example URL'):
+    st.code('https://youtu.be/n_3XDVOVraI')
+    st.code('https://www.youtube.com/watch?v=n_3XDVOVraI')
 else: 
   ## Display YouTube thumbnail image
   yt_id = extract_yt_id(yt_url)
