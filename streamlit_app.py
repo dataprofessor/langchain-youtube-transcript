@@ -63,10 +63,7 @@ else:
   ## Display YouTube thumbnail image
   yt_id = extract_yt_id(yt_url)
   get_yt_img(yt_id)
-  #st.image(yt_img_url, width=350)
-  #st.write(yt_img_url)
-  ##### get_transcript(yt_id)
-  st.write(f'https://www.youtube.com/watch?v={yt_id}')
+  get_transcript(yt_id)
   
   ## Display transcription
   #with st.expander('See video transcript'):
