@@ -1,6 +1,5 @@
 import streamlit as st
 from langchain.document_loaders import YoutubeLoader
-from rpunct import RestorePuncts
 
 st.title('📺 YouTube Transcription App')
 
