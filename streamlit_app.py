@@ -23,18 +23,6 @@ with st.sidebar:
 yt_url = st.text_input('Enter YouTube video URL', '')
 
 # Get YouTube video ID
-def extract_yt_id2(input_url):
-  processed_url = []
-  if input_url.startswith('https://www.youtube.com') or input_url.startswith('https://youtube.com'):
-    input_url_split = input_url.split('=')[-1]
-    processed_url.append(input_url_split)
-    #return f'http://i.ytimg.com/vi/{input_url_split}/maxresdefault.jpg'
-  if input_url.startswith('https://youtu.be/'):
-    input_url_split = input_url.split('/')[-1]
-    processed_url.append(input_url_split)
-    #return f'http://i.ytimg.com/vi/{input_url_split}/maxresdefault.jpg'
-  return f'http://i.ytimg.com/vi/{processed_url[0]}/maxresdefault.jpg'
-
 def extract_yt_id(input_url):
   processed_url = []
   if input_url.startswith('https://www.youtube.com') or input_url.startswith('https://youtube.com'):
