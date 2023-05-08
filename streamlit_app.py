@@ -44,7 +44,7 @@ def get_transcript(input_url):
 # Conditional display of content
 if yt_url is None:
   st.info('Please enter a YouTube video URL to get started!')
-else: 
+if yt_url is not None: 
   ## Display YouTube thumbnail image
   yt_img_url = extract_yt_id(yt_url)
   st.image(yt_img_url, width=350)
