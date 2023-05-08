@@ -44,7 +44,7 @@ def extract_yt_id(input_url):
 
 # Get YouTube thumbnail image
 def get_yt_img(input_id):
-  return st.image(f'http://i.ytimg.com/vi/{processed_url[0]}/maxresdefault.jpg', width=350)
+  return st.image(f'http://i.ytimg.com/vi/{input_id[0]}/maxresdefault.jpg', width=350)
 
 # Retrieve transcript from YouTube video
 def get_transcript(input_url):
